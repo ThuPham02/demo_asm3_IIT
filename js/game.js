@@ -21,7 +21,7 @@ let questions = [
     },
 
     {
-        question: 'What is the output of the following code? \np, q, r = 10, 20 ,30 \nprint(p, q, r)',
+        question: 'What is the output of the following code? \n\np, q, r = 10, 20 ,30 \nprint(p, q, r)',
         choice1: '10 20',
         choice2: '10 20 30',
         choice3: '10 30',
@@ -30,7 +30,7 @@ let questions = [
     },
 
     {
-        question: 'What is the output of the following code? \nsampleList = ["Jon", "Kelly", "Jessa"] \nsampleList.append(2, "Scott") \nprint(sampleList)',
+        question: 'What is the output of the following code? \n\nsampleList = ["Jon", "Kelly", "Jessa"] \nsampleList.append(2, "Scott") \nprint(sampleList)',
         choice1: 'The program executed with errors',
         choice2: '["Jon", "Kelly", "Scott", "Jessa"]',
         choice3: '["Jon", "Kelly", "Jessa", "Scott"]',
@@ -39,7 +39,7 @@ let questions = [
     },
 
     {
-        question: 'What is the output of the following code? \nvar= "James Bond" \nprint(var[2::-1])',
+        question: 'What is the output of the following code? \n\nvar= "James Bond" \nprint(var[2::-1])',
         choice1: 'Jam',
         choice2: 'dno',
         choice3: 'maJ',
@@ -48,7 +48,7 @@ let questions = [
     },
 
     {
-        question: 'What is the output of the following code? \nvar1 = 1 \nvar2 = 2 \nvar3 = "3" \nprint(var + var2 + var3)',
+        question: 'What is the output of the following code? \n\nvar1 = 1 \nvar2 = 2 \nvar3 = "3" \nprint(var + var2 + var3)',
         choice1: '6',
         choice2: '33',
         choice3: '123',
@@ -105,6 +105,12 @@ choices.forEach(choice => {
 
         if (classToApply === 'correct') {
             incrementScore(SCORE_POINTS)
+            var correct_ans = new Audio("/sound/correct_ans.mp3")
+            correct_ans.play()
+        }
+        else {
+            var wrong_ans = new Audio("/sound/wrong_ans.mp3")
+            wrong_ans.play()
         }
 
         selectedChoice.parentElement.classList.add(classToApply)
@@ -112,7 +118,7 @@ choices.forEach(choice => {
         setTimeout(()=>{
             selectedChoice.parentElement.classList.remove(classToApply)
             getNewQuestion()
-        }, 1000)
+        }, 1700)
     })
 })
 
