@@ -105,11 +105,11 @@ choices.forEach(choice => {
 
         if (classToApply === 'correct') {
             incrementScore(SCORE_POINTS)
-            var correct_ans = new Audio("/sound/correct_ans.mp3")
+            var correct_ans = new Audio("../sound/correct_ans.mp3")
             correct_ans.play()
         }
         else {
-            var wrong_ans = new Audio("/sound/wrong_ans.mp3")
+            var wrong_ans = new Audio("../sound/wrong_ans.mp3")
             wrong_ans.play()
         }
 
