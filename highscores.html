@@ -7,22 +7,26 @@
     <title>High Scores</title>
 
     <!-- CSS Stylesheet -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/highscores.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/highscores.css">
 
     <!-- Font Awesome -->
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
 </head>
-<body>
+<body onload="onload()">
     <div class="container">
         <div id="highScores" class="flex-center flex-column">
             <h1 id="finalScore">Leaderboard</h1>
             <ul id="highScoresList"></ul>
-                <a href="../index.html" class="btn">
+                <a href="index.html" class="btn">
                     Go Home <i class="fa fa-home"></i>
                 </a>
         </div>
     </div>
-    <script src="../js/highscores.js"></script>
+
+    <!-- JavaScript -->
+    <script src="js/highscores.js"></script>
+    <script src="js/theme.js"></script>
+
 </body>
 </html>
