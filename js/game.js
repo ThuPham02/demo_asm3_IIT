@@ -30,12 +30,12 @@ let questions = [
     },
 
     {
-        question: 'What is the output of the following code? \n\nsampleList = ["Jon", "Kelly", "Jessa"] \nsampleList.append(2, "Scott") \nprint(sampleList)',
+        question: 'What is the output of the following code? \n\nsampleList = ["Jon", "Kelly", "Jessa"] \nsampleList.append("Scott") \nprint(sampleList)',
         choice1: 'The program executed with errors',
         choice2: '["Jon", "Kelly", "Scott", "Jessa"]',
         choice3: '["Jon", "Kelly", "Jessa", "Scott"]',
         choice4: '["Jon", "Scott", "Kelly", "Jessa"]', 
-        answer: 2,
+        answer: 3,
     },
 
     {
